@@ -36,6 +36,17 @@ export class GeneralTab extends Tab {
       displayCharactersChangedSetting.hide();
     }
 
+    // 新增：无修改时不显示提示 Notice
+    tempDiv = this.contentEl.createDiv();
+    const noNoticeWhenNoChangeSetting = new ToggleSetting(
+      tempDiv,
+      'tabs.general.no-notice-when-no-change.name' as any,
+      'tabs.general.no-notice-when-no-change.description' as any,
+      'noNoticeWhenNoChange',
+      this.plugin
+    );
+    this.addSettingSearchInfoForGeneralSettings(noNoticeWhenNoChangeSetting);
+
     let displayLintOnActiveFileChangeSetting: ToggleSetting = null;
     tempDiv = this.contentEl.createDiv();
     const lintOnActiveFileChangeSetting = new ToggleSetting(tempDiv, 'tabs.general.lint-on-file-change.name', 'tabs.general.lint-on-file-change.description', 'lintOnFileChange', this.plugin, (value: boolean) => {
