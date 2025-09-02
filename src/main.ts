@@ -122,9 +122,8 @@ export default class LinterPlugin extends Plugin {
   async loadSettings() {
     const data = await this.loadData();
     this.settings = Object.assign({}, DEFAULT_SETTINGS, data);
-    // 新增设置默认值
-    if (typeof this.settings.noNoticeWhenNoChange !== 'boolean') {
-      this.settings.noNoticeWhenNoChange = false;
+    if (typeof this.settings.suppressMessageWhenNoChange !== 'boolean') {
+      this.settings.suppressMessageWhenNoChange = false;
     }
     if (typeof this.settings.logLevel === 'number') {
       this.settings.logLevel = convertNumberToLogLevel(this.settings.logLevel);
@@ -874,9 +873,9 @@ export default class LinterPlugin extends Plugin {
   }
 
   private displayChangedMessage(charsAdded: number, charsRemoved: number) {
-    const noNoticeWhenNoChange = this.settings.noNoticeWhenNoChange ?? false;
+    const suppressMessageWhenNoChange = this.settings.suppressMessageWhenNoChange ?? false;
     if (this.settings.displayChanged) {
-      if (noNoticeWhenNoChange && charsAdded + charsRemoved === 0) {
+      if (suppressMessageWhenNoChange && charsAdded + charsRemoved === 0) {
         return;
       }
       const message = dedent`

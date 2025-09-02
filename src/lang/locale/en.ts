@@ -162,9 +162,9 @@ export default {
         'name': 'Display message on lint',
         'description': 'Display the number of characters changed after linting',
       },
-      'no-notice-when-no-change': {
-        'name': 'No Notice When No Change',
-        'description': 'If enabled, no Notice will be shown when no characters are added or removed.',
+      'suppress-message-when-no-change': {
+        'name': 'Suppress Message When No Change',
+        'description': 'If enabled, no message will be shown when no actual changes occur.',
       },
       'lint-on-file-change': {
         'name': 'Lint on Focused File Change',

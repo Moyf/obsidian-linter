@@ -30,9 +30,9 @@ export interface LinterSettings {
   lintOnSave: boolean;
   displayChanged: boolean;
   /**
-   * 无修改时不显示提示 Notice
+   * 无修改时不显示消息
    */
-  noNoticeWhenNoChange?: boolean;
+  suppressMessageWhenNoChange?: boolean;
   settingsConvertedToConfigKeyValues: boolean;
   recordLintOnSaveLogs: boolean;
   lintOnFileChange: boolean;
@@ -53,7 +53,7 @@ export const DEFAULT_SETTINGS: Partial<LinterSettings> = {
   lintOnSave: false,
   recordLintOnSaveLogs: false,
   displayChanged: true,
-  noNoticeWhenNoChange: false,
+  suppressMessageWhenNoChange: false,
   lintOnFileChange: false,
   displayLintOnFileChangeNotice: false,
   settingsConvertedToConfigKeyValues: false,

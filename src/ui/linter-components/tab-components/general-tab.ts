@@ -36,17 +36,6 @@ export class GeneralTab extends Tab {
       displayCharactersChangedSetting.hide();
     }
 
-    // 新增：无修改时不显示提示 Notice
-    tempDiv = this.contentEl.createDiv();
-    const noNoticeWhenNoChangeSetting = new ToggleSetting(
-      tempDiv,
-      'tabs.general.no-notice-when-no-change.name' as any,
-      'tabs.general.no-notice-when-no-change.description' as any,
-      'noNoticeWhenNoChange',
-      this.plugin
-    );
-    this.addSettingSearchInfoForGeneralSettings(noNoticeWhenNoChangeSetting);
-
     let displayLintOnActiveFileChangeSetting: ToggleSetting = null;
     tempDiv = this.contentEl.createDiv();
     const lintOnActiveFileChangeSetting = new ToggleSetting(tempDiv, 'tabs.general.lint-on-file-change.name', 'tabs.general.lint-on-file-change.description', 'lintOnFileChange', this.plugin, (value: boolean) => {
@@ -64,6 +53,16 @@ export class GeneralTab extends Tab {
     if (!lintOnActiveFileChangeSetting.getBoolean()) {
       displayLintOnActiveFileChangeSetting.hide();
     }
+    
+    tempDiv = this.contentEl.createDiv();
+    const suppressMessageWhenNoChangeSetting = new ToggleSetting(
+      tempDiv,
+      'tabs.general.suppress-message-when-no-change.name' as any,
+      'tabs.general.suppress-message-when-no-change.description' as any,
+      'suppressMessageWhenNoChange',
+      this.plugin
+    );
+    this.addSettingSearchInfoForGeneralSettings(suppressMessageWhenNoChangeSetting);
 
     const sysLocale = navigator.language?.toLowerCase();
     const localeValues = ['system-default'];

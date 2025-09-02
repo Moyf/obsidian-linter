@@ -101,9 +101,9 @@ export default {
         'name': 'Mostrar mensaje en analizar',
         'description': 'Mostrar el número de caracteres modificados después de analizar',
       },
-      'no-notice-when-no-change': {
-        'name': 'Sin aviso cuando no hay cambios',
-        'description': 'Si está habilitado, no se mostrará ningún aviso cuando no se agreguen o eliminen caracteres.',
+      'suppress-message-when-no-change': {
+        'name': 'Suprimir mensaje cuando no hay cambios',
+        'description': 'Si está habilitado, no se mostrará ningún mensaje cuando no ocurran cambios reales.',
       },
       'folders-to-ignore': {
         'name': 'Carpetas para omitir',

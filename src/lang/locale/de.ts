@@ -128,9 +128,9 @@ export default {
         'name': 'Meldung beim Linten anzeigen',
         'description': 'Zeigen Sie die Anzahl der Zeichen an, die sich nach dem Linten geändert haben',
       },
-      'no-notice-when-no-change': {
-        'name': 'Keine Benachrichtigung bei keiner Änderung',
-        'description': 'Wenn aktiviert, wird keine Benachrichtigung angezeigt, wenn keine Zeichen hinzugefügt oder entfernt wurden.',
+      'suppress-message-when-no-change': {
+        'name': 'Meldung bei keiner Änderung unterdrücken',
+        'description': 'Wenn aktiviert, wird keine Meldung angezeigt, wenn keine tatsächlichen Änderungen auftreten.',
       },
       'lint-on-file-change': {
         'name': 'Linten bei Dateiänderungen',
