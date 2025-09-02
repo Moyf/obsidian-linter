@@ -128,6 +128,10 @@ export default {
         'name': 'Meldung beim Linten anzeigen',
         'description': 'Zeigen Sie die Anzahl der Zeichen an, die sich nach dem Linten geändert haben',
       },
+      'no-notice-when-no-change': {
+        'name': 'Keine Benachrichtigung bei keiner Änderung',
+        'description': 'Wenn aktiviert, wird keine Benachrichtigung angezeigt, wenn keine Zeichen hinzugefügt oder entfernt wurden.',
+      },
       'lint-on-file-change': {
         'name': 'Linten bei Dateiänderungen',
         'description': 'Wenn eine Datei geschlossen oder zu einer neuen Datei gewechselt wird, wird die vorherige Datei gelinted.',
